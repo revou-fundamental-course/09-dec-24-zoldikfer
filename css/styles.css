@@ -1,0 +1,46 @@
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Desain untuk banner */
+.banner {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px;
+}
+
+/* Desain untuk section paket */
+#our-package {
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+
+#our-package .package {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Desain responsif */
+@media (max-width: 768px) {
+    #our-package .package {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Sesuaikan tampilan di layar kecil */
+    #banner {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    #our-package .package {
+        flex-direction: column;
+        align-items: center;
+    }
+}
