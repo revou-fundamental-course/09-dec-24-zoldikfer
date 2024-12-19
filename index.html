@@ -6,38 +6,127 @@
     <title>Travel Agent</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
+
 <body>
-    <!-- Bagian Banner -->
-    <section id="banner">
+<header class="main-header">
+	<div class="home-icon"></div>
+
+	<nav>
+		<a href="#home-section">Home </a><span>||</span>
+		<a href="#our-packages-section">Our Packages </a><span>||</span>
+		<a href="#call-us-section">Call Us</a>
+	</nav>
+</header>
+
+<hr>
+
+<main>
+    <header class="content-header">
         <h1>Selamat Datang di Agen Perjalanan Kami</h1>
-        <p>Temukan Paket Perjalanan Terbaik di Sini</p>
+         <h4>Temukan Sensasi Paket Perjalanan Terbaik "Alam Jawa Barat"</h4>
+    </header>
+
+   
+
+<!--MAIN CONTENT -->
+    <section class="main-container" id="home-section">
+    <!-- Bagian Banner auto slide -->
+        <aside class="main-item">
+          <div class="banner-img banner-1"></div>
+          <div class="banner-img banner-2"></div>
+          <div class="banner-img banner-3"></div>  
+        </aside>
+
+
+
+     <!-- Form Kontak -->
+      <form class="main-item">
+        <label for="username-input">Username:</label>
+        <input type="text" id="username-input" required />
+        <button type="button" id="submit-btn" onclick="validateForm();">Submit</button>
+       </form>
+   
     </section>
 
-    <!-- Bagian Paket Kami -->
-    <section id="our-package">
-        <h2>Paket Perjalanan Kami</h2>
-        <div class="package">
-            <!-- Tambahkan paket perjalanan di sini -->
+
+<!-- OUR PACKAGES CONTENT -->
+<section id="our-packages-section">
+    
+    <header class="content-header our-packages-header">
+        <h1>OUR PACKAGES</h1>
+    </header>
+
+ <div class="package-grid">
+        <div class="package-item">
+            <div class="icon">💡</div>
+            <h3>Bali</h3>
+            <p>Travel dan wisata di Bali. Kunjungi cagar budaya dan kuliner yang menarik.</p>
         </div>
-    </section>
+        <div class="package-item">
+            <div class="icon">💡</div>
+            <h3>Bogor</h3>
+            <p>Travel dan Wisata Kebun Raya Bogor. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+        </div>
+        <div class="package-item">
+            <div class="icon">💡</div>
+            <h3>Garut</h3>
+            <p>Travel and wisata di pantai santolo</p>
+        </div>
+        <div class="package-item">
+            <div class="icon">⭐</div>
+            <h3>Bandung</h3>
+            <p>Travel dan wisata alam cikole & Floating market</p>
+        </div>
+        <div class="package-item">
+            <div class="icon">⭐</div>
+            <h3>Pangandaran</h3>
+            <p>Travel dan wisata pangandaran south beach</p>
+        </div>
+        <div class="package-item">
+            <div class="icon">⭐</div>
+            <h3>Sukabumi</h3>
+            <p>Wisata grand canyon sukabumi</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Form Kontak -->
-    <section id="contact">
-        <h2>Hubungi Kami</h2>
-        <form id="contact-form">
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" required>
+
+
+<!-- Call Us Content -->
+        <section id="call-us-section">
+            <header class="content-header our-packages-header">
+                <h1>Call Us</h1>
+            </header>
+            <article class="content"><h1>DAPATKAN PENGALAMAN KEINDAHAN ALAM JAWA BARAT LEVEL DUNIA BERSAMA KAMI </h1></article>
+ <div class="package-grid">
+        <div class="package-item">
+            <div class="icon">💡</div>
+            <h3>Bandung</h3>
+            <p>Branch Office</p>
+        </div>
+        <div class="package-item">
+            <div class="icon">💡</div>
+            <h3>Bandung</h3>
+            <p>Main Office</p>
+        </div>
+        <div class="package-item">
+            <div class="icon">💡</div>
+            <h3>Garut</h3>
+            <p>Branch Office</p>
+        </div>
+        </div>
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="destination">Destinasi Perjalanan:</label>
-            <input type="text" id="destination" name="destination" required>
-            
-            <button type="submit">Kirim</button>
-        </form>
-    </section>
+        </section>
+</main>
+
+<footer>
+    <span><h4>Made by Ferry @2024</h4></span>
+</footer>
+
+
 
     <script src="js/script.js"></script>
 </body>
 </html>
+  

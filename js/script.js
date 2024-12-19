@@ -1,26 +1,46 @@
-// Validasi form menggunakan JavaScript
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var destination = document.getElementById('destination').value;
-    
-    if (name === "" || email === "" || destination === "") {
-        alert("Semua field harus diisi!");
+// Ini Javascript
+console.log('Javascript berhasil tersambung');
+
+let indexSlide = 0;
+
+nextSlide();
+
+// Fungsi untuk memvalidasi
+function validateForm() {
+    const usernameInput = document.getElementById('username-input').value;
+    console.log(usernameInput);
+
+    // Validasi jika nama user tidak kosong
+    if (usernameInput == '') {
+        alert('Inputan tidak boleh kosong');
     } else {
-        alert("Formulir berhasil dikirim!");
+        document.getElementById('username-result').innerHTML = usernameInput;
     }
-});
 
-// Fitur auto slide untuk banner
-var currentIndex = 0;
-var banners = ["url('banner1.jpg')", "url('banner2.jpg')", "url('banner3.jpg')"];
-var bannerElement = document.getElementById('banner');
-
-function changeBanner() {
-    bannerElement.style.backgroundImage = banners[currentIndex];
-    currentIndex = (currentIndex + 1) % banners.length;
+    console.log('validateForm executed');
 }
 
-setInterval(changeBanner, 5000);  // Ganti banner setiap 5 detik
+function nextSlide() {
+    showBanner(indexSlide += 1);
+}
+
+function showBanner(n) {
+    const imageList = document.getElementsByClassName('banner-img');
+
+    console.log(imageList);
+    console.log(imageList.length);
+    console.log(n);
+    if (n > imageList.length - 1) indexSlide = 0;
+
+
+    // Hide semua banner
+    for (let i = 0; i < imageList.length; i++) {
+        imageList[i].style.display = "none";
+    }
+
+    // Show 1 Banner sesuai Posisi yang diinginkan
+    imageList[indexSlide].style.display = "block";
+}
+
+// Automate banned slide
+setInterval(nextSlide, 3000);
