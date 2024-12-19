@@ -68,6 +68,7 @@ nav>a {
 .main-container {
     display: flex;
     gap: 24px;
+   
 }
 
 .main-item {
@@ -159,4 +160,37 @@ text-align: center;
     }
 }
 
- 
+ form.main-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Jarak antar-elemen */
+    max-width: 300px; /* Batas lebar form */
+    padding: 32px; /* Ruang dalam form */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Warna latar belakang */
+}
+
+form.main-item label {
+    font-weight: bold;
+    margin-bottom: 4px; /* Jarak antara label dan input */
+}
+
+form.main-item input,
+form.main-item select,
+form.main-item button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form.main-item button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+
+

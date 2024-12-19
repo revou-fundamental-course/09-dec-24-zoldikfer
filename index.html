@@ -44,10 +44,22 @@
       <form class="main-item">
         <label for="username-input">Username:</label>
         <input type="text" id="username-input" required />
+
+        <label for="email-input">Email:</label>
+        <input type="email" id="email-input" required />
+
+        <label for="interest-select">Select Your Interest:</label>
+        <select id="interest-select" required>
+            <option value="" disabled selected>Pilih Minat Anda</option>
+            <option value="travel">Travel</option>
+            <option value="kuliner">Kuliner</option>
+            <option value="budaya">Budaya</option>
+            <option value="petualangan">Petualangan</option>
+        </select>
+
         <button type="button" id="submit-btn" onclick="validateForm();">Submit</button>
-       </form>
-   
-    </section>
+       </form> 
+       </section>
 
 
 <!-- OUR PACKAGES CONTENT -->
